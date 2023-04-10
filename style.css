@@ -1,0 +1,405 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Defaults */
+a{
+    text-decoration: none;
+    color: #EBEBF560;
+}
+
+.text-secondary {
+    color: #EBEBF5;
+}
+
+a:Hover{
+    color: white;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bg-dark{
+    background-color: #141414 !important;
+}
+
+.bg-success{
+    background-color: #B1DD8B !important;
+    color: #2F2F2F;
+}
+
+.text-grey{
+    color: #EBEBF5;
+}
+
+/* Vertical Navabar */
+.v-nav, .smart-nav{
+    justify-content: space-between;
+    align-items: space-between;
+    border-right: 1px solid #38383A;
+}
+
+.smart-nav{
+    top: 0;
+    background-color: #141414;
+}
+
+/* Nav Items */
+.nav-items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.nav-items li, .bottom-items .b-item {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    transition: ease .3s;
+}
+
+.nav-items .active {
+    background-color: #2F2F2F;
+}
+
+.nav-items li:hover, .bottom-items .b-item:hover{
+    background-color: #2F2F2F;
+    transition: ease .3s;
+}
+
+.nav-items .item.active a {
+    color: white;
+}
+
+.nav-items .item.active a svg path{
+    fill: white;
+    fill-opacity: 1;
+}
+
+.nav-items li a, .bottom-items .b-item a {
+    display: flex;
+    align-items: center;
+    color: #EBEBF560;
+    text-decoration: none;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.nav-items li a small, .bottom-items .b-item a small {
+    margin-left: 12px;
+    text-transform: capitalize;
+}
+
+
+/* Bottom Content */
+.bottom-items .b-item a .user-contianer{
+    position: relative;
+}
+.bottom-items .b-item a .user-contianer .p-user {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.bottom-items .b-item a .user-contianer .p-user::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: #32D74B;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-items .b-item a .p-user img {
+    width: 100%;
+}
+
+/* Edited */
+.d-hide{
+    transform: translateX(-400px);
+    position: absolute;
+    transition: .6s;
+}
+.d-show{
+    transform: translateX(10px);
+    position: absolute;
+    transition: .6s;
+}
+
+.top-bar{
+    top: 0;
+    left: 0;
+    z-index: 103;
+}
+
+.colap{
+    right: 10px;
+    top: 5px;
+}
+.colap span{
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+
+/* MAIN SECTION */
+
+.bar-items{
+    gap: 20px;
+    overflow: hidden;
+}
+
+.bar-items>.s-item{
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.bar-items>.s-item.s-active{
+    background-color: #007bff;
+    transition: .3s;
+}
+
+.bar-items>.s-item.s-active a{
+    color: white;
+}
+
+.bar-items>.s-item:hover{
+    background-color: #007bff;
+    transition: .3s;
+}
+
+.bar-items>.s-item>a{
+    display: block;
+    padding: 5px 20px;
+}
+
+/* Search box */
+.right-items{
+    justify-content: space-around;
+}
+
+.search-box input{
+    border-radius: 25px;
+    background-color: #38383A;
+    border: none;
+    text-indent: 30px;
+    padding: 5px 5px;
+    margin-left: auto;
+    color: white;
+}
+
+.search-box input:focus{
+    border: none;
+    outline: none;
+}
+
+.notification{
+    display: block;
+    margin-left: auto;
+}
+
+.search-icon{
+    left: 4.5%;
+}
+
+.arrow-down{
+    transform: rotate(90deg);
+    transition: .3s;
+    animation: breath .6s linear 2s infinite alternate;
+
+}
+
+.hide-up{
+    transform: translateY(-400px);
+    opacity: .01;
+    position: absolute;
+}
+
+
+/* Hero Component */
+.hero-contents{
+    height: clamp(100px, 300px, 500px);
+    background-image: url(images/hero-image.jpg);
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.hero-contents:hover{
+    background-image: url(images/hero-image2.jpg);
+}
+
+.gradi{
+    top: 0;
+    left: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.80));
+}
+
+.overr{
+    z-index: 100;
+}
+
+.overfar{
+    z-index: 1000;
+}
+.rotaterr{
+    transform: rotate(270deg);
+    opacity: 1;
+}
+
+/* OTHER SIDE */
+.side-contents{
+    gap: 10px;
+    background-color: #38383A;
+    border-radius: 0 10px 10px 0;
+}
+
+.side-contents .c-body a:hover{
+    background-color: #141414;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.427);
+    transition: ease-in-out .3s;
+}
+
+.side-contents .c-body:first-child{
+    border-bottom: 1px solid #ffffff50;
+    padding-bottom: 11px;
+}
+
+.image-container{
+    width: 55px;
+    height: 75px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container>img{
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* GAMES ON SALE */
+.game-onsale {
+
+}
+
+.trasnsis{
+    transition: .3s;
+}
+
+.g-title{
+    white-space: nowrap; /* prevent line breaks */
+    overflow: hidden; /* hide the extra text */
+    text-overflow: ellipsis; /* add "..." at the end */
+}
+
+.game-onsale > .container-fluid button{
+    background-color: transparent;
+    border: none;
+}
+
+.game-onsale > .container-fluid .prev{
+    transform: rotate(180deg) scale(0.9);
+    opacity: .6;
+}
+
+
+.sale-caroursel{
+    overflow: scroll;
+    position: relative;
+    height: 21rem;
+}
+
+.sale-caroursel::-webkit-scrollbar{
+    display: none;
+}
+
+.s-inner{
+    /* flex-wrap: wrap; */
+    gap: 1.3rem;
+    overflow-y: hide;
+    /* overflow-x: scroll; */
+    position: absolute;
+    transition: ease-in-out .3s;
+}
+.s-inner .sale-item{
+    width: 10rem;
+    gap: .7rem;
+}
+
+.s-inner .sale-item .img-box{
+    height: 14rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.s-inner .sale-item .img-box img {
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.s-inner .sale-item .img-box:hover img {
+    transform: scale(1.03);
+    transition: .3s;
+}
+
+.s-inner .sale-item .sale-detail{
+    gap: .1rem;
+}
+
+/* Animations */
+
+@keyframes breath {
+    0% {
+        opacity: .2;
+    }
+    100%{
+        opacity: .8;
+    }
+}
+
+/* ==================== */
+
+
+/* Break points */
+@media (min-width: 768px) { 
+    .hide-up{
+        transform: translateY(0px);
+        opacity: 1;
+        position: relative;
+    }
+    .hero-contents{
+        border-radius: 10px 0 0 10px;
+        height: clamp(100px, 600px, 500px);
+    }
+
+    .fs-md-4{
+        font-size: 1.5rem;
+    }
+
+ }
